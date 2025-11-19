@@ -306,7 +306,7 @@ ollama serve
 
 ## 📝 License
 
-[Specify your license]
+MIT License - See LICENSE file for details
 
 ## 🙏 Acknowledgments
 
@@ -314,10 +314,6 @@ ollama serve
 - **DocLayout-YOLO**: Layout detection model
 - **Ollama**: Local LLM inference
 - **EasyOCR/Tesseract/PaddleOCR**: OCR engines
-
-## 📧 Contact
-
-[Your contact information]
 
 ## 🗺️ Roadmap
 
