@@ -1,0 +1,311 @@
+{
+  "document_metadata": {
+    "title": "XR-2000 Router User Manual",
+    "document_type": "manual",
+    "version": "3.2.1",
+    "date": "2024-09-15"
+  },
+  "sections": [
+    {
+      "section_id": "1",
+      "title": "Introduction",
+      "content": "The XR-2000 is a high-performance enterprise router designed for demanding network environments. It provides advanced routing capabilities, robust security features, and exceptional reliability.",
+      "subsections": [
+        {
+          "title": "Product Overview",
+          "content": "The XR-2000 router offers enterprise-grade performance with up to 10 Gbps throughput and support for up to 500 simultaneous VPN connections."
+        },
+        {
+          "title": "Package Contents",
+          "content": "Router unit, power adapter, Ethernet cable, mounting brackets, quick start guide, and warranty card."
+        }
+      ]
+    },
+    {
+      "section_id": "2",
+      "title": "Safety Information",
+      "content": "Please read all safety instructions before operating the device. Failure to follow these guidelines may result in equipment damage or personal injury.",
+      "subsections": [
+        {
+          "title": "Electrical Safety",
+          "content": "Use only the supplied power adapter. Do not expose the device to moisture or extreme temperatures."
+        }
+      ]
+    },
+    {
+      "section_id": "3",
+      "title": "Technical Specifications",
+      "content": "Detailed technical specifications and performance characteristics of the XR-2000 router."
+    },
+    {
+      "section_id": "4",
+      "title": "Installation",
+      "content": "Step-by-step instructions for installing and configuring your XR-2000 router."
+    }
+  ],
+  "specifications": [
+    {
+      "parameter": "Operating Temperature",
+      "value": "0 to 40",
+      "unit": "°C",
+      "notes": "Non-condensing environment"
+    },
+    {
+      "parameter": "Storage Temperature",
+      "value": "-20 to 70",
+      "unit": "°C",
+      "notes": ""
+    },
+    {
+      "parameter": "Power Consumption",
+      "value": "45",
+      "unit": "W",
+      "notes": "Maximum under full load"
+    },
+    {
+      "parameter": "Input Voltage",
+      "value": "100-240",
+      "unit": "VAC",
+      "notes": "Auto-sensing"
+    },
+    {
+      "parameter": "Throughput",
+      "value": "10",
+      "unit": "Gbps",
+      "notes": "Full-duplex"
+    },
+    {
+      "parameter": "Routing Table Size",
+      "value": "100000",
+      "unit": "entries",
+      "notes": ""
+    },
+    {
+      "parameter": "VPN Tunnels",
+      "value": "500",
+      "unit": "connections",
+      "notes": "IPSec and SSL"
+    },
+    {
+      "parameter": "Memory",
+      "value": "4",
+      "unit": "GB",
+      "notes": "DDR4 RAM"
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "Table 1",
+      "title": "Port Specifications",
+      "headers": ["Port Type", "Quantity", "Speed", "Description"],
+      "rows": [
+        ["WAN", "2", "10 Gbps", "Fiber optic uplink ports"],
+        ["LAN", "8", "1 Gbps", "Gigabit Ethernet ports"],
+        ["Console", "1", "115200 baud", "RJ-45 management port"],
+        ["USB", "1", "USB 3.0", "Configuration backup"]
+      ]
+    },
+    {
+      "table_id": "Table 2",
+      "title": "LED Indicators",
+      "headers": ["LED", "Color", "Status", "Meaning"],
+      "rows": [
+        ["Power", "Green", "Solid", "Device powered on"],
+        ["Power", "Off", "Off", "Device powered off"],
+        ["Status", "Green", "Solid", "Normal operation"],
+        ["Status", "Amber", "Blinking", "Firmware update in progress"],
+        ["WAN", "Green", "Solid", "Link established"],
+        ["WAN", "Green", "Blinking", "Data transmission"],
+        ["LAN 1-8", "Green", "Solid", "Port connected"],
+        ["LAN 1-8", "Green", "Blinking", "Port activity"]
+      ]
+    },
+    {
+      "table_id": "Table 3",
+      "title": "Default Configuration",
+      "headers": ["Parameter", "Default Value", "Notes"],
+      "rows": [
+        ["IP Address", "192.168.1.1", "Management interface"],
+        ["Subnet Mask", "255.255.255.0", ""],
+        ["DHCP Server", "Enabled", "Range: .100-.200"],
+        ["Admin Username", "admin", "Change on first login"],
+        ["Admin Password", "admin", "Change immediately"]
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "figure_id": "Figure 1",
+      "caption": "Front Panel Layout",
+      "description": "Shows the location of LED indicators, reset button, and port connections on the front panel of the XR-2000 router."
+    },
+    {
+      "figure_id": "Figure 2",
+      "caption": "Rear Panel Connections",
+      "description": "Illustrates the power inlet, WAN ports, ventilation openings, and mounting points on the rear panel."
+    },
+    {
+      "figure_id": "Figure 3",
+      "caption": "Network Topology Example",
+      "description": "Example network diagram showing typical deployment scenario with XR-2000 connecting multiple VLANs and WAN connections."
+    }
+  ],
+  "warnings_and_cautions": [
+    {
+      "type": "warning",
+      "content": "Disconnect power before servicing. High voltage present. Refer servicing to qualified personnel only."
+    },
+    {
+      "type": "warning",
+      "content": "Do not open the device enclosure. No user-serviceable parts inside. Opening the case will void warranty."
+    },
+    {
+      "type": "caution",
+      "content": "Ensure adequate ventilation. Do not block air vents. Maintain 2 inches clearance on all sides."
+    },
+    {
+      "type": "caution",
+      "content": "Use only approved power adapters. Using incompatible power supplies may damage the device."
+    },
+    {
+      "type": "note",
+      "content": "Configuration changes take effect immediately. Save configuration to flash memory to persist across reboots."
+    },
+    {
+      "type": "note",
+      "content": "Default credentials should be changed during initial setup for security purposes."
+    }
+  ],
+  "procedures": [
+    {
+      "procedure_name": "Initial Setup Procedure",
+      "steps": [
+        {
+          "step_number": 1,
+          "instruction": "Unpack the router and verify all components are present",
+          "notes": "Report missing items to your supplier immediately"
+        },
+        {
+          "step_number": 2,
+          "instruction": "Choose a suitable mounting location with adequate ventilation",
+          "notes": "Ambient temperature should be within 0-40°C"
+        },
+        {
+          "step_number": 3,
+          "instruction": "Connect the power adapter to the router and plug into AC outlet",
+          "notes": "Power LED should illuminate green within 30 seconds"
+        },
+        {
+          "step_number": 4,
+          "instruction": "Connect your computer to any LAN port using an Ethernet cable",
+          "notes": "Use a standard CAT5e or better cable"
+        },
+        {
+          "step_number": 5,
+          "instruction": "Open a web browser and navigate to https://192.168.1.1",
+          "notes": "Accept the security certificate warning on first connection"
+        },
+        {
+          "step_number": 6,
+          "instruction": "Login using default credentials (admin/admin)",
+          "notes": "You will be prompted to change password on first login"
+        },
+        {
+          "step_number": 7,
+          "instruction": "Follow the setup wizard to configure WAN connection",
+          "notes": "Select appropriate connection type (DHCP, Static, PPPoE)"
+        },
+        {
+          "step_number": 8,
+          "instruction": "Configure LAN settings and DHCP parameters",
+          "notes": "Default DHCP range is 192.168.1.100-200"
+        },
+        {
+          "step_number": 9,
+          "instruction": "Apply settings and wait for router to reboot",
+          "notes": "Reboot typically takes 2-3 minutes"
+        },
+        {
+          "step_number": 10,
+          "instruction": "Verify internet connectivity and save configuration",
+          "notes": "Use the 'Save Configuration' button to persist settings"
+        }
+      ]
+    },
+    {
+      "procedure_name": "Factory Reset Procedure",
+      "steps": [
+        {
+          "step_number": 1,
+          "instruction": "Locate the recessed Reset button on the rear panel",
+          "notes": "A paperclip or pin is required to press the button"
+        },
+        {
+          "step_number": 2,
+          "instruction": "With the router powered on, press and hold the Reset button",
+          "notes": "Hold for exactly 10 seconds"
+        },
+        {
+          "step_number": 3,
+          "instruction": "Release the button when the Status LED begins blinking amber",
+          "notes": "This indicates reset is in progress"
+        },
+        {
+          "step_number": 4,
+          "instruction": "Wait for the router to complete the reset process",
+          "notes": "All LEDs will cycle and router will reboot (approximately 3 minutes)"
+        },
+        {
+          "step_number": 5,
+          "instruction": "Verify reset by logging in with default credentials",
+          "notes": "All custom settings will be lost"
+        }
+      ]
+    },
+    {
+      "procedure_name": "Firmware Update Procedure",
+      "steps": [
+        {
+          "step_number": 1,
+          "instruction": "Download the latest firmware from the manufacturer website",
+          "notes": "Verify firmware file integrity using provided MD5 checksum"
+        },
+        {
+          "step_number": 2,
+          "instruction": "Log into the router web interface",
+          "notes": "Ensure stable power during firmware update"
+        },
+        {
+          "step_number": 3,
+          "instruction": "Navigate to System > Firmware Update",
+          "notes": ""
+        },
+        {
+          "step_number": 4,
+          "instruction": "Click 'Choose File' and select the downloaded firmware file",
+          "notes": "File should have .bin extension"
+        },
+        {
+          "step_number": 5,
+          "instruction": "Click 'Upload and Install' to begin the update",
+          "notes": "Do not power off or reset during this process"
+        },
+        {
+          "step_number": 6,
+          "instruction": "Wait for upload and verification to complete",
+          "notes": "Progress bar will show upload status (typically 2-5 minutes)"
+        },
+        {
+          "step_number": 7,
+          "instruction": "Router will automatically reboot after installation",
+          "notes": "Allow 3-5 minutes for reboot and initialization"
+        },
+        {
+          "step_number": 8,
+          "instruction": "Log back in and verify firmware version under System > About",
+          "notes": "Configuration is preserved during firmware updates"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+PyMuPDF
+opencv-python-headless
+numpy
+Pillow
+pdfplumber
+scikit-learn
+scipy
+paddleocr
+paddlepaddle
+huggingface-hub
+ultralytics
+doclayout-yolo

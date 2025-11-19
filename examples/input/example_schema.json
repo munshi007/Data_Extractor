@@ -1,0 +1,232 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/technical-manual-schema.json",
+  "title": "Technical Manual Data Extraction Schema",
+  "description": "Schema for extracting structured data from technical manuals and documentation",
+  "type": "object",
+  "properties": {
+    "document_metadata": {
+      "type": "object",
+      "description": "Metadata about the source document",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Document title",
+          "examples": ["User Manual", "Technical Specification"]
+        },
+        "document_type": {
+          "type": "string",
+          "description": "Type of document",
+          "enum": ["manual", "specification", "guide", "report"],
+          "examples": ["manual"]
+        },
+        "version": {
+          "type": "string",
+          "description": "Document version number",
+          "examples": ["1.0", "2.3.1"]
+        },
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Document publication date",
+          "examples": ["2024-01-15"]
+        }
+      },
+      "required": ["title", "document_type"]
+    },
+    "sections": {
+      "type": "array",
+      "description": "Main sections of the document",
+      "items": {
+        "type": "object",
+        "properties": {
+          "section_id": {
+            "type": "string",
+            "description": "Unique section identifier",
+            "examples": ["1", "1.1", "2.3.1"]
+          },
+          "title": {
+            "type": "string",
+            "description": "Section title",
+            "examples": ["Introduction", "Safety Guidelines"]
+          },
+          "content": {
+            "type": "string",
+            "description": "Section content text",
+            "examples": ["This section describes..."]
+          },
+          "subsections": {
+            "type": "array",
+            "description": "Nested subsections",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "Subsection title"
+                },
+                "content": {
+                  "type": "string",
+                  "description": "Subsection content"
+                }
+              },
+              "required": ["title"]
+            }
+          }
+        },
+        "required": ["section_id", "title"]
+      }
+    },
+    "specifications": {
+      "type": "array",
+      "description": "Technical specifications extracted from the document",
+      "items": {
+        "type": "object",
+        "properties": {
+          "parameter": {
+            "type": "string",
+            "description": "Specification parameter name",
+            "examples": ["Operating Temperature", "Power Consumption"]
+          },
+          "value": {
+            "type": "string",
+            "description": "Specification value",
+            "examples": ["0-50°C", "100W"]
+          },
+          "unit": {
+            "type": "string",
+            "description": "Unit of measurement",
+            "examples": ["°C", "W", "MHz"]
+          },
+          "notes": {
+            "type": "string",
+            "description": "Additional notes or conditions",
+            "examples": ["Under normal operating conditions"]
+          }
+        },
+        "required": ["parameter", "value"]
+      }
+    },
+    "tables": {
+      "type": "array",
+      "description": "Tables extracted from the document",
+      "items": {
+        "type": "object",
+        "properties": {
+          "table_id": {
+            "type": "string",
+            "description": "Table identifier",
+            "examples": ["Table 1", "Table A-1"]
+          },
+          "title": {
+            "type": "string",
+            "description": "Table caption or title",
+            "examples": ["Component Specifications"]
+          },
+          "headers": {
+            "type": "array",
+            "description": "Column headers",
+            "items": {
+              "type": "string"
+            },
+            "examples": [["Part Number", "Description", "Quantity"]]
+          },
+          "rows": {
+            "type": "array",
+            "description": "Table data rows",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": ["headers", "rows"]
+      }
+    },
+    "figures": {
+      "type": "array",
+      "description": "Figures and diagrams referenced in the document",
+      "items": {
+        "type": "object",
+        "properties": {
+          "figure_id": {
+            "type": "string",
+            "description": "Figure identifier",
+            "examples": ["Figure 1", "Fig. 2-3"]
+          },
+          "caption": {
+            "type": "string",
+            "description": "Figure caption",
+            "examples": ["System Architecture Diagram"]
+          },
+          "description": {
+            "type": "string",
+            "description": "Detailed description of the figure",
+            "examples": ["Shows the main components and their connections"]
+          }
+        },
+        "required": ["figure_id", "caption"]
+      }
+    },
+    "warnings_and_cautions": {
+      "type": "array",
+      "description": "Safety warnings and cautions",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["warning", "caution", "note"],
+            "description": "Type of notice"
+          },
+          "content": {
+            "type": "string",
+            "description": "Warning or caution text"
+          }
+        },
+        "required": ["type", "content"]
+      }
+    },
+    "procedures": {
+      "type": "array",
+      "description": "Step-by-step procedures",
+      "items": {
+        "type": "object",
+        "properties": {
+          "procedure_name": {
+            "type": "string",
+            "description": "Name of the procedure",
+            "examples": ["Installation Procedure", "Calibration Steps"]
+          },
+          "steps": {
+            "type": "array",
+            "description": "Sequential steps",
+            "items": {
+              "type": "object",
+              "properties": {
+                "step_number": {
+                  "type": "integer",
+                  "description": "Step sequence number"
+                },
+                "instruction": {
+                  "type": "string",
+                  "description": "Step instruction"
+                },
+                "notes": {
+                  "type": "string",
+                  "description": "Additional notes for this step"
+                }
+              },
+              "required": ["step_number", "instruction"]
+            }
+          }
+        },
+        "required": ["procedure_name", "steps"]
+      }
+    }
+  },
+  "required": ["document_metadata", "sections"],
+  "additionalProperties": false
+}
